@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <info organisation="com.sb" module="ivy-publish-test-fixtures" revision="1.0.0" status="release" publication="20221018124516"/>
+  <configurations>
+    <conf name="compile" visibility="public"/>
+    <conf name="default" visibility="public" extends="runtime"/>
+    <conf name="runtime" visibility="public"/>
+    <conf name="testFixturesApiElements" visibility="public"/>
+    <conf name="testFixturesRuntimeElements" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="ivy-publish-test-fixtures" type="jar" ext="jar" conf="compile,runtime"/>
+    <artifact name="ivy-publish-test-fixtures" type="jar" ext="jar" conf="testFixturesApiElements,testFixturesRuntimeElements" m:classifier="test-fixtures"/>
+  </publications>
+  <dependencies>
+    <dependency org="com.sb" name="ivy-publish-test-fixtures" rev="1.0.0" conf="testFixturesApiElements-&gt;default"/>
+    <dependency org="com.sb" name="ivy-publish-test-fixtures" rev="1.0.0" conf="testFixturesRuntimeElements-&gt;default"/>
+  </dependencies>
+</ivy-module>

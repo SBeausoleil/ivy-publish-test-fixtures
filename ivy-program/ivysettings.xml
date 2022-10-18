@@ -1,0 +1,10 @@
+<ivysettings>
+    <settings defaultResolver="internal"/>
+    <property name="ivy.repository" value="<absolute path to project>/ivy-publish-test-fixtures/ivy_repo" />
+    <resolvers>
+        <filesystem name="internal">
+            <ivy pattern="${ivy.repository}/[organisation]/[module]/[revision]/ivy-[revision].xml"/>
+            <artifact pattern="${ivy.repository}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+        </filesystem>
+    </resolvers>
+</ivysettings>

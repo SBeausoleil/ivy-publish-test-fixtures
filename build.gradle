@@ -1,0 +1,36 @@
+plugins {
+    id 'java-library'
+    id 'ivy-publish'
+    id 'java-test-fixtures'
+    id 'idea'
+}
+
+group = 'com.sb'
+status = 'release'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        ivy(IvyPublication) {
+            from components.java
+            descriptor.status = status
+        }
+    }
+    repositories {
+        ivy {
+            url "./ivy_repo"
+        }
+    }
+}

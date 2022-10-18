@@ -1,0 +1,7 @@
+<ivy-module version="2.0">
+    <info organisation="com.sb" module="ivy-program"/>
+    <dependencies>
+        <dependency org="com.sb" name="ivy-publish-test-fixtures" rev="1.0.0"/>
+    </dependencies>
+</ivy-module>
+
